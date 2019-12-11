@@ -6,16 +6,16 @@
 require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
-require("channels")
-require("custom/index")
 require("jquery");
 require("jquery-ui");
-import 'jquery-ui-dist/jquery-ui.min.css';
+require("channels")
+require("custom/index")
 require("bootstrap");
-
 require("custom/chosen_jquery")
 require("custom/chosen_select")
+require("custom/pwa")
 
+import 'jquery-ui-dist/jquery-ui.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../stylesheets/application'
 
@@ -25,14 +25,3 @@ import '../stylesheets/application'
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
-
-
-$(function(){
-    // Plain jquery
-    $('#fadeMe').fadeOut(5000);
-
-    // jquery-ui
-    const availableCities = ['Baltimore', 'New York'];
-    $('#cityField').autocomplete( { source: availableCities } );
-    $('#calendarField').datepicker( { dateFormat: 'yy-mm-dd' } );
-})

@@ -1,0 +1,1 @@
+$('#lightPic').attr('background', 'blue');
