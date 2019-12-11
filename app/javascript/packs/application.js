@@ -7,7 +7,17 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
+require("custom/index")
+require("jquery");
+require("jquery-ui");
+import 'jquery-ui-dist/jquery-ui.min.css';
+require("bootstrap");
 
+require("custom/chosen_jquery")
+require("custom/chosen_select")
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '../stylesheets/application'
 
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
@@ -15,3 +25,14 @@ require("channels")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+
+
+$(function(){
+    // Plain jquery
+    $('#fadeMe').fadeOut(5000);
+
+    // jquery-ui
+    const availableCities = ['Baltimore', 'New York'];
+    $('#cityField').autocomplete( { source: availableCities } );
+    $('#calendarField').datepicker( { dateFormat: 'yy-mm-dd' } );
+})

@@ -1,15 +1,27 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Rails6Template</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+        <title><%= title_helper(yield(:title)) %></title>
 
-  <body>
-    <%= yield %>
-  </body>
+        <%= csrf_meta_tags %>
+        <%= csp_meta_tag %>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+        <%#= stylesheet_link_tag '//ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/le-frog/jquery-ui.min.css' %>
+        <%#= stylesheet_link_tag 'https://cdn.jsdelivr.net/npm/jquery-ui-bootstrap@1.0.0/jquery.ui.theme.min.css' %>
+        <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-ui-bootstrap@1.0.0/jquery.ui.theme.min.css"> -->
+
+        <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+
+        <!-- Lighthouse Details -->
+        <!-- <link rel="manifest" href="/manifest.json"> -->
+    </head>
+    <body>
+        <%= flash_messages %>
+        <%= yield %>
+    </body>
 </html>
