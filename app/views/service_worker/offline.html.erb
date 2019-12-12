@@ -1,0 +1,39 @@
+<div class="container">
+  <div id="bodyHolder">
+    <div class="bulbHolder">
+      <%= image_tag "light_bulb_on.png", alt: "light", id: "myOnBulb",  onclick: "lightBulb()" %>
+      <%= image_tag "light_bulb_off.png", alt: "light", id: "myOffBulb",  onclick: "lightBulb()",
+        style: "display:none;" %>
+    </div>
+    <br>
+    <h4 class="text-center">Got any ideas?</h4>
+  </div>
+</div>
+
+<style>
+  #bodyHolder{
+    padding-top: 5em;
+    /*margin:auto;*/
+  }
+
+  .bulbHolder {
+    text-align: center;
+    margin:auto;
+  }
+</style>
+
+<script>
+function lightBulb() {
+
+  var on  = document.getElementById("myOnBulb");
+  var off = document.getElementById("myOffBulb");
+
+  if (on.style.display === "none") {
+    on.style.display  = "inline-flex";
+    off.style.display = "none";
+  } else {
+    on.style.display  = "none";
+    off.style.display = "inline-flex";
+  }
+}
+</script>

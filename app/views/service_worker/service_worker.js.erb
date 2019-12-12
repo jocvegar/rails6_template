@@ -8,6 +8,8 @@ function onInstall(event) {
       return cache.addAll([
         '<%= asset_pack_path 'application.js' %>',
         '<%= stylesheet_path 'application.css' %>',
+        '<%= image_tag 'light_bulb_on.png' %>',
+        '<%= image_tag 'light_bulb_off.png' %>',
         '/offline.html',
       ]);
     })
